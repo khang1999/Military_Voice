@@ -1,0 +1,560 @@
+/*Main Body*/
+#home body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #fdfefe;
+    justify-content: center;
+    align-items: center;
+    font-family: "montserrat";}
+
+/*Navigation bar*/
+#home .navbar{
+    vertical-align: top;
+    margin-top: 0px;
+    margin-left: 60px;
+    margin-right: 60px;
+    color: white;
+    text-decoration: none;
+    padding: 5px 5px;
+    padding-top: 30px;
+    font-size: 16px;
+    font-family: "montserrat";
+}
+
+/*Below nav bar*/
+#home .container{
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+#home .container .card{
+    position: relative;
+    cursor: pointer;
+    border: none;
+    padding-top: 60px;
+    font-family: "montserrat";
+}
+
+#home .container .card .face{
+    width: 400px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+#home .container .card .face svg {
+  display: block;
+  margin: auto;
+}
+
+
+/*Format icons*/
+#home svg{
+    width: 70px;
+    height: 70px;
+}
+
+#home .container .card:hover .face.face1 svg{
+    fill: white;
+}
+
+#home .container .card:hover .face.face3 svg{
+    fill: white;
+}
+
+/*Card before hover*/
+#home .container .card .face.face1{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+#home .container .card .face.face3{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+/*Left card hover*/
+#home .container .card:hover .face.face1{
+    background: #6bd6c2;
+    transform: translateY(0);
+}
+
+#home .container .card .face.face1 .content{
+    transition: 0.5s;
+}
+
+#home .container .card:hover .face.face1 .content{
+    opacity: 1;
+}
+
+#home .container .card .face.face1 .content img{
+    max-width: 100px;
+}
+
+#home .container .card .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #000000;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#home .container .card:hover .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+
+
+
+/*Right card*/
+#home .container .card:hover .face.face3{
+    background: #9A9CEA;
+    transform: translateY(0);
+}
+
+#home .container .card .face.face3 .content{
+    transition: 0.5s;
+}
+
+#home .container .card:hover .face.face3 .content{
+    opacity: 1;
+}
+
+#home .container .card .face.face3 .content img{
+    max-width: 100px;
+}
+
+#home .container .card .face.face3 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #000000;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+
+#home .container .card:hover .face.face3 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+
+/*Hidden Card Left*/
+#home .container .card .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 12px 38px rgba(107, 214, 194, .5);
+    transform: translateY(-100px);
+}
+
+#home .container .card:hover .face.face2{
+    transform: translateY(0);
+}
+
+#home .container .card .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+}
+
+/*Hidden Card Right*/
+#home .container .card .face.face4{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 12px 38px rgba(154, 156, 234, .5);
+    transform: translateY(-100px);
+}
+
+#home .container .card:hover .face.face4{
+    transform: translateY(0);
+}
+
+#home .container .card .face.face4 .content p{
+    margin: 0;
+    padding: 0;
+}
+
+/*Button*/
+#home .container .card .face.face2 .content a{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+#home .container .card .face.face2 .content a:hover{
+    background: #333;
+    color: #fff;
+}
+
+#home .container .card .face.face4 .content a{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+#home .container .card .face.face4 .content a:hover{
+    background: #333;
+    color: #fff;
+}
+
+
+.instructions{
+  padding-top:50px;
+  padding-left: 50px;
+  width: 60rem;
+  font-family: "montserrat";
+}
+
+#data .navbar{
+    vertical-align: top;
+    margin-top: 0px;
+    margin-left: 60px;
+    margin-right: 60px;
+    color: white;
+    text-decoration: none;
+    padding: 5px 5px;
+    padding-top: 30px;
+    font-size: 16px;
+    font-family: "montserrat";
+}
+
+ /* Style the tab */
+#data .tab {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding-top: 40px;
+}
+
+
+/* Style the buttons that are used to open the tab content */
+#data .tab .speakButton button {
+  border: 1px solid #6bd6c2;
+  background: none;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: 0.8s;
+  font-size: 20px;
+  font-family: "montserrat";
+  margin: 10px;
+
+  color: #6bd6c2;
+  position: relative;
+  overflow: hidden;
+
+
+}
+
+#data .tab .listenButton button {
+  border: 1px solid #9A9CEA;
+  background: none;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: 0.8s;
+  font-size: 20px;
+  font-family: "montserrat";
+  margin: 10px;
+
+  color: #9A9CEA;
+}
+
+
+/* Change background color of buttons on hover */
+#data .tab .speakButton button:hover {
+  color: #fff;
+  background-color: #6bd6c2;
+}
+
+#data .tab .listenButton button:hover {
+  color: #fff;
+  background-color: #9A9CEA;
+}
+
+/* Create an active/current tablink class */
+#data .tab .speakButton button.active {
+  background-color: #6bd6c2;
+  color: #fff;
+}
+
+#data .tab .listenButton button.active {
+  background-color: #9A9CEA;
+  color: #fff;
+}
+
+/* Style the tab content */
+#data .tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: 20px;
+} 
+
+.col-md-9{
+  padding-top: 100px;
+  padding-left: 90px;
+}
+
+.tabcontent .start{
+  text-align: center;
+  font-size: 20px;
+
+}
+
+.tabcontent .card {
+  font-size: 30px;
+  min-height: 300px;
+  max-width: 700px;
+  margin: 0 auto;
+  float: none;
+  margin-bottom: 10px;
+}
+
+.tabcontent .card .card-text{
+  justify-content: center;
+  align-items: center;
+
+}
+
+.upload{
+  padding-top: 60px;
+  padding-left: 60px;
+}
+
+/*Record feature*/
+
+.holder{
+  background-color: #4c474c;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#4c474c), to(#141414));
+  background-image: -o-linear-gradient(bottom, #4c474c 0%, #141414 100%);
+  background-image: linear-gradient(0deg, #FFFFFF 0%, #FFFFFF 100%);
+  border-radius: 40px;
+}
+
+[data-role="controls"] > button {
+  margin: 60px auto;
+  outline: none;
+  display: block;
+  border: none;
+  background-color: #D9AFD9;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#D9AFD9), to(#97D9E1));
+  background-image: -o-linear-gradient(bottom, #D9AFD9 0%, #97D9E1 100%);
+  background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-indent: -1000em;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 5px 5px 2px rgba(0,0,0,0.3) inset, 
+      0px 0px 0px 10px #fff, 0px 0px 0px 15px #333;
+          
+}
+
+[data-role="controls"] > button:hover {
+  background-color: #ee7bee;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#ee7bee), to(#6fe1f5));
+  background-image: -o-linear-gradient(bottom, #ee7bee 0%, #6fe1f5 100%);
+  background-image: linear-gradient(0deg, #ee7bee 0%, #6fe1f5 100%);
+}
+
+[data-role="controls"] > button[data-recording="true"] {
+  background-color: #ff2038;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#ff2038), to(#b30003));
+  background-image: -o-linear-gradient(bottom, #ff2038 0%, #b30003 100%);
+  background-image: linear-gradient(0deg, #ff2038 0%, #b30003 100%);
+}
+
+[data-role="recordings"] > .row {
+  width: auto;
+  height: auto;
+  padding: 20px;
+}
+
+[data-role="recordings"] > .row > #close {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background:#ccc;
+    line-height: 35px;
+    border-radius: 0px;
+    padding-bottom: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    color: black;
+}
+
+[data-role="recordings"] > .row > #close:hover {
+    color:#fff;
+}
+
+
+[data-role="recordings"] > .row > audio {
+  outline: none;
+}
+
+[data-role="recordings"] > .row > a {
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+  line-height: 50px;
+  vertical-align: middle;
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+  background-color: #0093E9;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#0093E9), to(#80D0C7));
+  background-image: -o-linear-gradient(bottom, #0093E9 0%, #80D0C7 100%);
+  background-image: linear-gradient(0deg, #0093E9 0%, #80D0C7 100%);
+  float: right;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+[data-role="recordings"] > .row > a:hover {
+  text-decoration: none;
+}
+
+
+[data-role="recordings"] > .row > a:active {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0093E9), to(#80D0C7));
+  background-image: -o-linear-gradient(top, #0093E9 0%, #80D0C7 100%);
+  background-image: linear-gradient(180deg, #0093E9 0%, #80D0C7 100%);
+}
+
+
+.tabcontent .skipButton{
+  text-align: center;
+
+}
+.tabcontent .skipButton button{
+  text-align: center;
+
+  border: 1px solid #6bd6c2;
+  background: none;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: 0.8s;
+  font-size: 20px;
+  font-family: "montserrat";
+
+  color: #6bd6c2;
+
+}
+
+.tabcontent .skipButton button:hover {
+  color: #fff;
+  background-color: #6bd6c2;
+}
+
+
+/*Contents of tabs*/
+#data .flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tabcontent .validateButton{
+  text-align:center;
+}
+
+.tabcontent .validateButton button{
+  text-align: center;
+
+  border: 1px solid #9A9CEA;
+  background: none;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: 0.8s;
+  font-size: 20px;
+  font-family: "montserrat";
+
+  color: #9A9CEA;
+
+}
+
+.tabcontent .validateButton button:hover {
+  color: #fff;
+  background-color: #9A9CEA;
+}
+
+.col-md-3{
+  padding-top:100px;
+  padding-right:250px;
+}
+
+
+.progress {
+  width: 300px;
+  height: 30px;
+  background-color: #d8d8d8;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 30px; /* To center it vertically */
+  color: white;
+}
+
+.progress-bar {
+  background: linear-gradient(to left, #6bd6c2, #9A9CEA);
+  box-shadow: 0 3px 3px -5px #6bd6c2, 0 2px 5px #9A9CEA;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  height: 100%;
+  width: 0;
+  transition: 1s ease 0.3s;
+}
+/*.recordingList > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recordingList button {
+  font-size: 30px;
+  border-radius: 50%;
+}
+
+.recordingList h3 {
+  width: max-content;
+}*/

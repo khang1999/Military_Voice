@@ -1,0 +1,79 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Custom CSS -->
+  {% comment "Load your css like so" %}
+  <link rel="stylesheet" href="{% static 'css/my/app/app.css' %}">
+  {% endcomment %}
+
+
+  <title>Military Voice</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="{% static "main.css" %}">
+</head>
+
+
+<body id="home">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+    <a class="navbar-brand" href="/home/" style="font-size: 30px">Military Voice</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExample09">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/home/speak/">CONTRIBUTE <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/home/datasets/">DATASETS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">ABOUT</a>
+        </li>
+      </ul>
+
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+
+        <a href="/home/speak">
+        <button id="SpeakButton" type="button" class="btn btn-primary btn-sm" style="background-color: #6bd6c2; border-color: lavender">Speak</button>
+      </a>
+
+
+        <button type="button" class="btn btn-secondary btn-sm" style="margin-right: 30px; background-color: #9A9CEA; border-color: lavender">Listen</button>
+      </div>
+
+      <!-- <button type="button" class="btn btn-outline-secondary" style="margin:10px;">Log In / Sign Up</button> -->
+      
+
+    </div>
+  </nav>
+<div class="upload">
+{% if messages %}
+	{% for sentence in sentences %}
+		<div>
+			<strong>{{message|safe}}</strong>
+		</div>
+	{% endfor %}
+{% else %}
+{{order}}
+<form method="post" enctype="multipart/form-data">
+	{% csrf_token %}
+	<label>Upload a file</label>
+	<input type="file" name = "file">
+	<p> Only accepts CSV files</p>
+	<button class="btn btn-outline-secondary" type="submit">Upload</button>
+</form>
+{% endif %}
+</div>
+
+  </body>
+  </html>
+

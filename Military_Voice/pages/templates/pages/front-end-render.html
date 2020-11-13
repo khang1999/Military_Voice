@@ -1,0 +1,158 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Custom CSS -->
+  {% comment "Load your css like so" %}
+  <link rel="stylesheet" href="{% static 'css/my/app/app.css' %}">
+  {% endcomment %}
+
+
+  <title>Military Voice</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="{% static "main.css" %}">
+</head>
+
+
+<body id="home">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+    <a class="navbar-brand" href="#" style="font-size: 30px">Military Voice</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExample09">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/home/speak/">CONTRIBUTE <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/home/datasets/">DATASETS</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">ABOUT</a>
+        </li> -->
+      </ul>
+
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+
+        <a href="/home/speak">
+        <button id="SpeakButton" type="button" class="btn btn-primary btn-sm" style="background-color: #6bd6c2; border-color: lavender">Speak</button>
+      </a>
+
+
+        <button type="button" class="btn btn-secondary btn-sm" style="margin-right: 30px; background-color: #9A9CEA; border-color: lavender">Listen</button>
+      </div>
+
+      <!-- <button type="button" class="btn btn-outline-secondary" style="margin:10px;">Log In / Sign Up</button> -->
+      
+
+    </div>
+  </nav>
+
+<script type="text/javascript">
+  var sentences = JSON.parse("{{ data | escapejs }}")
+  var recordings = JSON.parse("{{ audio_data | escapejs }}")
+</script>
+
+  <div class="container">
+    <!-- Navigation Bar -->
+
+    <div class="card">
+      <a href = "/home/speak/">
+      <div class="face face1">
+        <div class="content">
+
+
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-mic-fill" fill="#6bd6c2" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z"/>
+            <path fill-rule="evenodd" d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"/>
+          </svg>
+
+          <h3>Speak</h3>
+        </div>
+      </a>
+      </div>
+      <div class="face face2">
+        <div class="content">
+          <p class="speak-progress"></p>
+          <a href="/home/speak">Begin</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="face face3">
+        <div class="content">
+
+
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-play-fill" fill="#9A9CEA" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+          </svg>
+
+
+          <h3>Listen</h3>
+        </div>
+      </div>
+      <div class="face face4">
+        <div class="content">
+          <p>Progress: </p>
+          <a href="/home/speak">Begin</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="instructions">
+  <div class="instructions-body">
+    Instructions:
+  </div>
+  <div class="instructions-body">
+    1) These cards will either be an item or list of items, a phrase, or a sentence.
+  </div>
+  <div class="instructions-body">
+    2) When you encounter an acronym (in caps) read them however makes sense to you. There's not a wrong answer. For different acronyms - this could be:
+  </div>
+  <div class="instructions-body">
+    &emsp;&emsp;-A series of letters (e.g., USA)
+  </div>
+  <div class="instructions-body">
+    &emsp;&emsp;-A single word (e.g., GIF)
+  </div>
+  <div class="instructions-body">
+    &emsp;&emsp;-A combo of the two (e.g., JPEG)
+  </div>
+  <div class="instructions-body">
+    3) Skim through the card before you record it.
+  </div>
+  <div class="instructions-body">
+    4) Press the button on the center of the card to start and stop the recording
+  </div>
+  <div class="instructions-body">
+    5) If you are satisfied with your recording, press the submit button
+  </div>
+  <div class="instructions-body">
+    6) If you are not, you can press the button to start a new recording (you can compare between recordings) 
+  </div>
+</div>
+
+<!-- Your FrontEnd JS Code -->
+{% comment "Below is an example of how you might render your Angular/React/Vue front-end framework code" %}
+<script src="{% static 'js/my/app/app.js' %}"></script>
+{% endcomment %}
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="{% static "main.js" %}"></script>
+</body>
+</html>
