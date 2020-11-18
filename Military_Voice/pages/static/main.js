@@ -50,13 +50,13 @@ $('.card-speak-text').text(sentences[speakIndex].text)
 var listenIndex = Math.floor(Math.random() * recordings.length)
 
 
-
+if(listenIndex > 0){
 if(!recordings[listenIndex].verified){
     $('.card-listen-text').text(recordings[listenIndex].text)
     var audioObject = $('<audio controls></audio>')
         .attr('src', recordings[listenIndex].audiofile);
     $('div[data-role="recordings-listen"] .row').append(audioObject)
-}
+}}
 
 
 $('.btn-validate-yes').click(function() {
