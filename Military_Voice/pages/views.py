@@ -106,4 +106,4 @@ class DatasetsView(View):
         recordingSerializer = RecordingSerializer(recordings, many = True)
         data = {'data': JsonResponse(serializers.data, safe = False).content.decode(),
 				'audio_data': JsonResponse(recordingSerializer.data, safe=False).content.decode()}
-        return render(request, "pages/datasets.html", data
+        return render(request, "pages/datasets.html", data)
