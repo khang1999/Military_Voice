@@ -1,30 +1,3 @@
-/* Let's Build: With JavaScript - Web-Crunch.com
-   Subscribe on YouTube - https://youtube.com/c/webcrunch
-   
-   Let's Build: Dynamic Tabs 
-*/
-
-// function openTab(evt, type) {
-//   // Declare all variables
-//   var i, tabcontent, tablinks;
-
-//   // Get all elements with class="tabcontent" and hide them
-//   tabcontent = document.getElementsByClassName("tabcontent");
-//   for (i = 0; i < tabcontent.length; i++) {
-//     tabcontent[i].style.display = "none";
-//   }
-
-//   // Get all elements with class="tablinks" and remove the class "active"
-//   tablinks = document.getElementsByClassName("tablinks");
-//   for (i = 0; i < tablinks.length; i++) {
-//     tablinks[i].className = tablinks[i].className.replace(" active", "");
-//   }
-
-//   // Show the current tab, and add an "active" class to the button that opened the tab
-//   document.getElementById(type).style.display = "block";
-//   evt.currentTarget.className += " active";
-//} 
-
 $('.tablinks').click(function() {
 
 	$('.tabcontent').css('display', 'none')
@@ -86,9 +59,6 @@ $('.btn-validate-yes').click(function() {
 $('.btn-validate-no').click(function() {
     var fd = new FormData();
     fd.append('id', recordings[listenIndex].id)
-    // fd.append('audiofile', recordings[listenIndex].audiofile)
-    // fd.append('textid', recordings[listenIndex].id)
-    // fd.append('text', recordings[listenIndex].text)
     fd.append('verified', 2)
 
     $.ajax({
@@ -120,12 +90,6 @@ $('.speak-progress').text('Progress: ' + recordingLength + '/' + sentenceLength)
 $('.counter').text(recordingLength + '/' + sentenceLength)
 
 
-
-// $('.btn-skip').click(function() {
-// 	var index = Math.floor(Math.random() * sentences.length)
-
-// 	$('.card-text').text(sentences[index].text)
-// })
 function blobToFile(theBlob, fileName){
     //A Blob() is almost a File() - it's just missing the two properties below which we will add
     theBlob.lastModifiedDate = new Date();
@@ -206,18 +170,7 @@ jQuery(document).ready(function () {
                             })
 
                         })
-                        // console.log(data)
 
-                        // downloadObject.click(function() {
-                        //     $.post('/home/speak/',data)
-                        //        .done(function(response){
-                        //         console.log(response);
-                        //     });
-                        // })        
-
-                       
-
-                        // Wrap everything in a row
                         var holderObject = $('<div class="row"></div>')
                                 .append(audioObject)
                                 .append(downloadObject);

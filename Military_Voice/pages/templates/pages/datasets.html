@@ -18,7 +18,7 @@
   <link rel="stylesheet" type="text/css" href="{% static "main.css" %}">
 </head>
 
-
+<!-- Navbar -->
 <body id="home">
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
@@ -35,9 +35,6 @@
         <li class="nav-item active">
           <a class="nav-link" href="/home/datasets/">DATASETS</a>
         </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">ABOUT</a>
-        </li> -->
       </ul>
 
       <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -50,9 +47,6 @@
         <button type="button" class="btn btn-secondary btn-sm" style="margin-right: 30px; background-color: #9A9CEA; border-color: lavender">Listen</button>
       </div>
 
-      <!-- <button type="button" class="btn btn-outline-secondary" style="margin:10px;">Log In / Sign Up</button> -->
-      
-
     </div>
   </nav>
 
@@ -61,6 +55,8 @@
     var recordings = JSON.parse("{{ audio_data | escapejs }}")
 </script>
 
+
+<!-- Tabs -->
   <div class="container">
     <!-- Navigation Bar -->
 

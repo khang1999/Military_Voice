@@ -544,17 +544,3 @@
   width: 0;
   transition: 1s ease 0.3s;
 }
-/*.recordingList > div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.recordingList button {
-  font-size: 30px;
-  border-radius: 50%;
-}
-
-.recordingList h3 {
-  width: max-content;
-}*/
